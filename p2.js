@@ -3,7 +3,7 @@ const crypto = require('crypto');
 
 const P1_ENDPOINT = 'http://localhost:8000';
 
-await (async () => {
+(async () => {
     const party2 = new EcdsaParty2(P1_ENDPOINT);
     const party2MasterKeyShare = await party2.generateMasterKey();
     const party2ChildShare = party2.getChildShare(party2MasterKeyShare, 0, 0);
